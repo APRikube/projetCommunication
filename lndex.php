@@ -13,13 +13,13 @@
     <meta name="author" content="Dashboard">
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 
-    <title>DASHGUM - FREE Bootstrap Admin Template</title>
+    <title>Manage your team</title>
 
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
     <!--external css-->
     <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet"/>
-    <link href="assets/js/fullcalendar/bootstrap-fullcalendar.css" rel="stylesheet" />
+    <link href="assets/js/fullcalendar/bootstrap-fullcalendar.css" rel="stylesheet"/>
     <link rel="stylesheet" type="text/css" href="assets/css/zabuto_calendar.css">
     <link rel="stylesheet" type="text/css" href="assets/js/gritter/css/jquery.gritter.css"/>
     <link rel="stylesheet" type="text/css" href="assets/lineicons/style.css">
@@ -78,6 +78,34 @@
     </div>
 </div>
 
+<!-- modal -->
+<div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="modalEntrerHoraires"
+     class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Formulaire ajout</h4>
+            </div>
+            <div class="modal-body">
+                <p>Nom</p>
+                <input type="text" name="inputNom" placeholder="Nom" autocomplete="off"
+                       class="form-control placeholder-no-fix">
+                <p style="padding-top: 10px">Heure début</p>
+                <input type="text" name="inputDebut" placeholder="Heure début" autocomplete="off"
+                       class="form-control placeholder-no-fix">
+                <p style="padding-top: 10px">Heure fin</p>
+                <input type="text" name="inputFin" placeholder="Heure fin" autocomplete="off"
+                       class="form-control placeholder-no-fix">
+            </div>
+            <div class="modal-footer">
+                <button data-dismiss="modal" class="btn btn-default" type="button">Annuler</button>
+                <button class="btn btn-theme" type="button">Envoyer</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <section id="container">
     <!-- **********************************************************************************************************************************************************
     TOP BAR CONTENT & NOTIFICATIONS
@@ -88,7 +116,7 @@
             <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
         </div>
         <!--logo start-->
-        <a href="index.html" class="logo"><b>DASHGUM FREE</b></a>
+        <a href="index.html" class="logo"><b>SHARE YOUR TEAM</b></a>
         <!--logo end-->
         <div class="nav notify-row" id="top_menu">
             <!--  notification start -->
@@ -178,105 +206,21 @@
             <!-- sidebar menu start-->
             <ul class="sidebar-menu" id="nav-accordion">
 
-                <p class="centered"><a href="profile.html"><img src="assets/img/ui-sam.jpg" class="img-circle"
-                                                                width="60"></a></p>
+                <p class="centered"><a href="#"><img style="background-color: #eee" src="assets/img/imageProfil2.PNG" class="img-circle" width="60"></a></p>
                 <h5 class="centered">Jeanne Darque</h5>
 
                 <li class="mt">
                     <a data-toggle="modal" href="lndex.php#modalAjoutEmploye">
-                        <i class="fa fa-dashboard"></i>
+                        <i class="fa fa-cogs"></i>
                         <span>Ajout employé</span>
                     </a>
                 </li>
-
-                <!-- modal -->
-                <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1"
-                     id="modalAjoutEmploye" class="modal fade">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;
-                                </button>
-                                <h4 class="modal-title">Mot de passe oublié ?</h4>
-                            </div>
-                            <div class="modal-body">
-                                <p>Entrez votre adresse e-mail ci-dessous pour réinitialiser votre mot de passe.</p>
-                                <input type="text" name="email" placeholder="Email" autocomplete="off"
-                                       class="form-control placeholder-no-fix">
-
-                            </div>
-                            <div class="modal-footer">
-                                <button data-dismiss="modal" class="btn btn-default" type="button">Annuler</button>
-                                <button class="btn btn-theme" type="button">Envoyer</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <li class="sub-menu">
-                    <a href="javascript:;">
-                        <i class="fa fa-desktop"></i>
-                        <span>UI Elements</span>
+                <li>
+                    <a data-toggle="modal" href="lndex.php#modalEntrerHoraires">
+                        <i class="fa fa-dashboard"></i>
+                        <span>Entrer horaires</span>
                     </a>
-                    <ul class="sub">
-                        <li><a href="general.html">General</a></li>
-                        <li><a href="buttons.html">Buttons</a></li>
-                        <li><a href="panels.html">Panels</a></li>
-                    </ul>
                 </li>
-
-                <li class="sub-menu">
-                    <a href="javascript:;">
-                        <i class="fa fa-cogs"></i>
-                        <span>Components</span>
-                    </a>
-                    <ul class="sub">
-                        <li><a href="calendar.html">Calendar</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="todo_list.html">Todo List</a></li>
-                    </ul>
-                </li>
-                <li class="sub-menu">
-                    <a href="javascript:;">
-                        <i class="fa fa-book"></i>
-                        <span>Extra Pages</span>
-                    </a>
-                    <ul class="sub">
-                        <li><a href="blank.html">Blank Page</a></li>
-                        <li><a href="login.html">Login</a></li>
-                        <li><a href="lock_screen.html">Lock Screen</a></li>
-                    </ul>
-                </li>
-                <li class="sub-menu">
-                    <a href="javascript:;">
-                        <i class="fa fa-tasks"></i>
-                        <span>Forms</span>
-                    </a>
-                    <ul class="sub">
-                        <li><a href="form_component.html">Form Components</a></li>
-                    </ul>
-                </li>
-                <li class="sub-menu">
-                    <a href="javascript:;">
-                        <i class="fa fa-th"></i>
-                        <span>Data Tables</span>
-                    </a>
-                    <ul class="sub">
-                        <li><a href="basic_table.html">Basic Table</a></li>
-                        <li><a href="responsive_table.html">Responsive Table</a></li>
-                    </ul>
-                </li>
-                <li class="sub-menu">
-                    <a href="javascript:;">
-                        <i class=" fa fa-bar-chart-o"></i>
-                        <span>Charts</span>
-                    </a>
-                    <ul class="sub">
-                        <li><a href="morris.html">Morris</a></li>
-                        <li><a href="chartjs.html">Chartjs</a></li>
-                    </ul>
-                </li>
-
             </ul>
             <!-- sidebar menu end-->
         </div>
@@ -323,7 +267,7 @@
                                             <td class="numeric" data-title="Nom">Dupont</td>
                                             <td class="numeric" data-title="Poste">Ouvrier</td>
                                             <td class="numeric" data-title="Email">jean-jacques@gmail.com</td>
-                                            <td class="numeric" data-title="jours pris">15</td>
+                                            <td class="numeric" data-title="jours pris">21</td>
                                             <td class="numeric" colspan="2" style="background-color: #5cb85c"></td>
                                         </tr>
                                         <tr>
@@ -374,6 +318,103 @@
                         </aside>
                     </div>
 
+                    <div class="row mt">
+                        <div class="col-lg-12">
+                            <!-- TWITTER PANEL -->
+
+                            <h3 style="text-align: center">Jean-Jacques Moyoumed Semaine 10</h3>
+                            <div class="col-md-4 mb">
+                                <div class="darkblue-panel pn">
+                                    <div class="darkblue-header">
+                                        <h5>Conges restants</h5>
+                                    </div>
+                                    <canvas id="serverstatus" height="120" width="120"></canvas>
+                                    <script>
+                                        var doughnutData = [
+                                            {
+                                                value: 6,
+                                                color: "#68dff0"
+                                            },
+                                            {
+                                                value: 12,
+                                                color: "#444c57"
+                                            }
+                                        ];
+                                        var myDoughnut = new Chart(document.getElementById("serverstatus").getContext("2d")).Doughnut(doughnutData);
+                                    </script>
+                                    <p>6heures restantes sur 12</p>
+                                </div>
+                                <! -- /darkblue panel -->
+                            </div>
+                            <!-- /col-md-4 -->
+
+                            <div class="showback">
+                                <h4><i class="fa fa-angle-right"></i> Graphique des heures</h4>
+                                <output>Faria Da Costa</output>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="90"
+                                         aria-valuemin="0" aria-valuemax="100" style="width: 90%">
+                                        <span class="sr-only">90% Complete (success)</span>
+                                    </div>
+                                </div>
+                                <output>Jean-Jacques Moyoumed</output>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="50"
+                                         aria-valuemin="0" aria-valuemax="100" style="width: 50%">
+                                        <span class="sr-only">50% Complete (warning)</span>
+                                    </div>
+                                </div>
+                                <output>Victor Alves</output>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="20"
+                                         aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                        <span class="sr-only">20% Complete</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!--/showback -->
+                    </div>
+
+                    <div class="row mt">
+
+                        <div class="col-md-12">
+                            <div class="content-panel">
+                                <h4><i class="fa fa-angle-right"></i> Liste salarié congés</h4>
+                                <hr>
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Prénom</th>
+                                        <th>Nom</th>
+                                        <th>Congés</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Jean-Jacques</td>
+                                        <td>Moyoumed</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Victor</td>
+                                        <td>Alves</td>
+                                        <td>10</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Faria</td>
+                                        <td>Da Costa</td>
+                                        <td>2</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <! --/content-panel -->
+                        </div><!-- /col-md-12 -->
+                    </div>
 
                 </div><!-- /col-lg-9 END SECTION MIDDLE -->
 
@@ -393,138 +434,113 @@
                         </div>
                         <div class="details">
                             <p>
-                                <muted>2 Minutes Ago</muted>
+                                <muted>Il y a 1 heure</muted>
                                 <br/>
-                                <a href="#">James Brown</a> subscribed to your newsletter.<br/>
+                                <a href="#">Jean-Eudes Dupont</a> a effectué une demande de congés.<br/>
                             </p>
                         </div>
                     </div>
-                    <!-- Second Action -->
                     <div class="desc">
                         <div class="thumb">
                             <span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
                         </div>
                         <div class="details">
                             <p>
-                                <muted>3 Hours Ago</muted>
+                                <muted>Il y a 3 heures</muted>
                                 <br/>
-                                <a href="#">Diana Kennedy</a> purchased a year subscription.<br/>
-                            </p>
-                        </div>
-                    </div>
-                    <!-- Third Action -->
-                    <div class="desc">
-                        <div class="thumb">
-                            <span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
-                        </div>
-                        <div class="details">
-                            <p>
-                                <muted>7 Hours Ago</muted>
-                                <br/>
-                                <a href="#">Brandon Page</a> purchased a year subscription.<br/>
-                            </p>
-                        </div>
-                    </div>
-                    <!-- Fourth Action -->
-                    <div class="desc">
-                        <div class="thumb">
-                            <span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
-                        </div>
-                        <div class="details">
-                            <p>
-                                <muted>11 Hours Ago</muted>
-                                <br/>
-                                <a href="#">Mark Twain</a> commented your post.<br/>
-                            </p>
-                        </div>
-                    </div>
-                    <!-- Fifth Action -->
-                    <div class="desc">
-                        <div class="thumb">
-                            <span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
-                        </div>
-                        <div class="details">
-                            <p>
-                                <muted>18 Hours Ago</muted>
-                                <br/>
-                                <a href="#">Daniel Pratt</a> purchased a wallet in your store.<br/>
+                                Horaires chantier<a href="#"> Gare Saint-Jean</a> à entrer.<br/>
                             </p>
                         </div>
                     </div>
 
+
                     <!-- USERS ONLINE SECTION -->
-                    <h3>TEAM MEMBERS</h3>
+                    <h3>MEMBRES</h3>
                     <!-- First Member -->
                     <div class="desc">
                         <div class="thumb">
-                            <img class="img-circle" src="assets/img/ui-divya.jpg" width="35px" height="35px" align="">
+                            <img class="img-circle" src="assets/img/imageProfil2.PNG" width="35px" height="35px" align="">
                         </div>
                         <div class="details">
-                            <p><a href="#">DIVYA MANIAN</a><br/>
-                                <muted>Available</muted>
+                            <p><a href="#">Jeanne DARQUE</a><br/>
+                                <muted>Ressources Humaines</muted>
                             </p>
                         </div>
                     </div>
                     <!-- Second Member -->
                     <div class="desc">
                         <div class="thumb">
-                            <img class="img-circle" src="assets/img/ui-sherman.jpg" width="35px" height="35px" align="">
+                            <img class="img-circle" src="assets/img/imageProfil2.PNG" width="35px" height="35px" align="">
                         </div>
                         <div class="details">
-                            <p><a href="#">DJ SHERMAN</a><br/>
-                                <muted>I am Busy</muted>
+                            <p><a href="#">Yves AHOMARCHE</a><br/>
+                                <muted>Chef de chantier</muted>
                             </p>
                         </div>
                     </div>
                     <!-- Third Member -->
                     <div class="desc">
                         <div class="thumb">
-                            <img class="img-circle" src="assets/img/ui-danro.jpg" width="35px" height="35px" align="">
+                            <img class="img-circle" src="assets/img/imageProfil2.PNG" width="35px" height="35px" align="">
                         </div>
                         <div class="details">
-                            <p><a href="#">DAN ROGERS</a><br/>
-                                <muted>Available</muted>
+                            <p><a href="#">Jean-Eudes DUPONT</a><br/>
+                                <muted>Chef de chantier</muted>
                             </p>
                         </div>
                     </div>
                     <!-- Fourth Member -->
                     <div class="desc">
                         <div class="thumb">
-                            <img class="img-circle" src="assets/img/ui-zac.jpg" width="35px" height="35px" align="">
+                            <img class="img-circle" src="assets/img/imageProfil2.PNG" width="35px" height="35px" align="">
                         </div>
                         <div class="details">
-                            <p><a href="#">Zac Sniders</a><br/>
-                                <muted>Available</muted>
+                            <p><a href="#">Jean-Jacques DUPONT</a><br/>
+                                <muted>Ouvrier</muted>
                             </p>
                         </div>
                     </div>
                     <!-- Fifth Member -->
                     <div class="desc">
                         <div class="thumb">
-                            <img class="img-circle" src="assets/img/ui-sam.jpg" width="35px" height="35px" align="">
+                            <img class="img-circle" src="assets/img/imageProfil2.PNG" width="35px" height="35px" align="">
                         </div>
                         <div class="details">
-                            <p><a href="#">Marcel Newman</a><br/>
-                                <muted>Available</muted>
+                            <p><a href="#">Jean-Jacques MOYOUMED</a><br/>
+                                <muted>Ouvrier</muted>
                             </p>
                         </div>
                     </div>
-
-                    <!-- CALENDAR-->
-                    <div id="calendar" class="mb">
-                        <div class="panel green-panel no-margin">
-                            <div class="panel-body">
-                                <div id="date-popover" class="popover top"
-                                     style="cursor: pointer; disadding: block; margin-left: 33%; margin-top: -50px; width: 175px;">
-                                    <div class="arrow"></div>
-                                    <h3 class="popover-title" style="disadding: none;"></h3>
-                                    <div id="date-popover-content" class="popover-content"></div>
-                                </div>
-                                <div id="my-calendar"></div>
-                            </div>
+                    <div class="desc">
+                        <div class="thumb">
+                            <img class="img-circle" src="assets/img/imageProfil2.PNG" width="35px" height="35px" align="">
                         </div>
-                    </div><!-- / calendar -->
-
+                        <div class="details">
+                            <p><a href="#">Victor ALVES</a><br/>
+                                <muted>Ouvrier</muted>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="desc">
+                        <div class="thumb">
+                            <img class="img-circle" src="assets/img/imageProfil2.PNG" width="35px" height="35px" align="">
+                        </div>
+                        <div class="details">
+                            <p><a href="#">Faria DA COSTA</a><br/>
+                                <muted>Ouvrier</muted>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="desc">
+                        <div class="thumb">
+                            <img class="img-circle" src="assets/img/imageProfil2.PNG" width="35px" height="35px" align="">
+                        </div>
+                        <div class="details">
+                            <p><a href="#">Jean-Luc DUPONT</a><br/>
+                                <muted>Fonction support</muted>
+                            </p>
+                        </div>
+                    </div>
                 </div><!-- /col-lg-3 -->
             </div>
             <! --/row -->
