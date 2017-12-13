@@ -51,74 +51,7 @@
                 <div class="nav notify-row" id="top_menu">
                     <!--  notification start -->
                     <ul class="nav top-menu">
-                        <!-- settings start -->
-                        <li class="dropdown">
-                            <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
-                                <i class="fa fa-tasks"></i>
-                                <span class="badge bg-theme">4</span>
-                            </a>
-                            <ul class="dropdown-menu extended tasks-bar">
-                                <div class="notify-arrow notify-arrow-green"></div>
-                                <li>
-                                    <p class="green">You have 4 pending tasks</p>
-                                </li>
-                                <li>
-                                    <a href="index.html#">
-                                        <div class="task-info">
-                                            <div class="desc">DashGum Admin Panel</div>
-                                            <div class="percent">40%</div>
-                                        </div>
-                                        <div class="progress progress-striped">
-                                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                                                <span class="sr-only">40% Complete (success)</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="index.html#">
-                                        <div class="task-info">
-                                            <div class="desc">Database Update</div>
-                                            <div class="percent">60%</div>
-                                        </div>
-                                        <div class="progress progress-striped">
-                                            <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-                                                <span class="sr-only">60% Complete (warning)</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="index.html#">
-                                        <div class="task-info">
-                                            <div class="desc">Product Development</div>
-                                            <div class="percent">80%</div>
-                                        </div>
-                                        <div class="progress progress-striped">
-                                            <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-                                                <span class="sr-only">80% Complete</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="index.html#">
-                                        <div class="task-info">
-                                            <div class="desc">Payments Sent</div>
-                                            <div class="percent">70%</div>
-                                        </div>
-                                        <div class="progress progress-striped">
-                                            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
-                                                <span class="sr-only">70% Complete (Important)</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="external">
-                                    <a href="#">See All Tasks</a>
-                                </li>
-                            </ul>
-                        </li>
+                        
                         <!-- settings end -->
                         <!-- inbox dropdown start-->
                         <li id="header_inbox_bar" class="dropdown">
@@ -209,7 +142,7 @@
                         <h5 class="centered">Jean-Jacques Dupont</h5>
 
                         <li class="mt">
-                            <a class="active" href="index.html">
+                            <a class="active" href="#">
                                 <i class="fa fa-dashboard"></i>
                                 <span>Dashboard</span>
                             </a>
@@ -297,7 +230,7 @@
                                 <!-- REVENUE PANEL -->
                                 <div class="darkblue-panel pn">
                                     <div class="darkblue-header">
-                                        <h5>Horaires par mois</h5>
+                                        <h5>HORAIRES PAR MOIS</h5>
                                     </div>
                                     <div class="chart mt">
                                         <div class="sparkline" data-type="line" data-resize="true" data-height="75" data-width="90%" data-line-width="1" data-line-color="#fff" data-spot-color="#fff" data-fill-color="" data-highlight-line-color="#fff" data-spot-radius="4" data-data="[110,115,120,110,113,115,117,120,110,100,130,115]"></div>
@@ -331,12 +264,12 @@
 
                             <div class="col-md-4 col-md-offset-4 mb">
                                 <!-- WHITE PANEL - TOP USER -->
-                                <div class="white-panel pn" style="height: 300px;">
+                                <div class="white-panel pn" style="height: 320px;">
                                     <div class="white-header">
                                         <h5 style="color:#444">Chef de chantier</h5>
                                     </div>
-                                    <p><img src="assets/img/ui-zac.jpg" class="img-circle" width="80"></p>
-                                    <p style="color:#444"><b>Zac Snider</b></p>
+                                    <p><img style="background-color:#ddd" src="assets/img/imageProfil2.PNG" class="img-circle" width="80"></p>
+                                    <p style="color:#444"><b>Yves Ahomarché</b></p>
 
                                     <p class="mt">
                                         Monday : 8h - 12h / 14h - 16h<br />
