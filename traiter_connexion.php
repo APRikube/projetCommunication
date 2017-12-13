@@ -1,12 +1,9 @@
 <?php
 
 if ($_POST["email"] == "rh.gmail.com") {
-    header("Location: Index.html");
+    header("Location: Index.php");
 } else {
-    header("Location: lndex.html");
+    header("Location: lndex.php");
 }
-
-
-
 
 ?>
