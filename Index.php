@@ -229,56 +229,15 @@
 
                         <li class="sub-menu">
                             <a href="javascript:;" >
-                                <i class="fa fa-cogs"></i>
-                                <span>Components</span>
+                                <i class="fa fa-unlock"></i>
+                                <span>Congés</span>
                             </a>
                             <ul class="sub">
-                                <li><a  href="calendar.html">Calendar</a></li>
-                                <li><a  href="gallery.html">Gallery</a></li>
-                                <li><a  href="todo_list.html">Todo List</a></li>
+                                <li><a  href="calendar.html">Poser</a></li>
+                                <li><a  href="gallery.html">Demandes émises</a></li>
+                                <li><a  href="todo_list.html">Congés acceptés</a></li>
                             </ul>
                         </li>
-                        <li class="sub-menu">
-                            <a href="javascript:;" >
-                                <i class="fa fa-book"></i>
-                                <span>Extra Pages</span>
-                            </a>
-                            <ul class="sub">
-                                <li><a  href="blank.html">Blank Page</a></li>
-                                <li><a  href="login.html">Login</a></li>
-                                <li><a  href="lock_screen.html">Lock Screen</a></li>
-                            </ul>
-                        </li>
-                        <li class="sub-menu">
-                            <a href="javascript:;" >
-                                <i class="fa fa-tasks"></i>
-                                <span>Forms</span>
-                            </a>
-                            <ul class="sub">
-                                <li><a  href="form_component.html">Form Components</a></li>
-                            </ul>
-                        </li>
-                        <li class="sub-menu">
-                            <a href="javascript:;" >
-                                <i class="fa fa-th"></i>
-                                <span>Data Tables</span>
-                            </a>
-                            <ul class="sub">
-                                <li><a  href="basic_table.html">Basic Table</a></li>
-                                <li><a  href="responsive_table.html">Responsive Table</a></li>
-                            </ul>
-                        </li>
-                        <li class="sub-menu">
-                            <a href="javascript:;" >
-                                <i class=" fa fa-bar-chart-o"></i>
-                                <span>Charts</span>
-                            </a>
-                            <ul class="sub">
-                                <li><a  href="morris.html">Morris</a></li>
-                                <li><a  href="chartjs.html">Chartjs</a></li>
-                            </ul>
-                        </li>
-
                     </ul>
                     <!-- sidebar menu end-->
                 </div>
@@ -385,7 +344,7 @@
                                         Wednesday : 8h - 12h / 14h - 16h<br />
                                         Thursday : 8h - 12h / 14h - 16h<br />
                                         Friday : 8h - 12h / 14h - 16h<br />
-                                        <input style="color:#444" type="submit" value="Valider horaires" /><br />
+                                        <input style="color:#444" type="submit" value="Modifier horaires" /><input style="color:#444" type="submit" value="Valider horaires" /><br />
 
                                     </p>
                                 </div>
@@ -395,196 +354,7 @@
                         </div><!-- /row -->
 
 
-                        <div class="row">
-                            <!-- TWITTER PANEL -->
 
-
-
-                            <div class="col-md-4 mb">
-                                <!-- INSTAGRAM PANEL -->
-                                <div class="instagram-panel pn">
-                                    <i class="fa fa-instagram fa-4x"></i>
-                                    <p>@THISISYOU<br/>
-                                        5 min. ago
-                                    </p>
-                                    <p><i class="fa fa-comment"></i> 18 | <i class="fa fa-heart"></i> 49</p>
-                                </div>
-                            </div><!-- /col-md-4 -->
-
-
-
-                        </div><!-- /row -->
-
-                        <div class="row mt">
-                            <!--CUSTOM CHART START -->
-                            <div class="border-head">
-                                <h3>VISITS</h3>
-                            </div>
-                            <div class="custom-bar-chart">
-                                <ul class="y-axis">
-                                    <li><span>10.000</span></li>
-                                    <li><span>8.000</span></li>
-                                    <li><span>6.000</span></li>
-                                    <li><span>4.000</span></li>
-                                    <li><span>2.000</span></li>
-                                    <li><span>0</span></li>
-                                </ul>
-                                <div class="bar">
-                                    <div class="title">JAN</div>
-                                    <div class="value tooltips" data-original-title="8.500" data-toggle="tooltip" data-placement="top">85%</div>
-                                </div>
-                                <div class="bar ">
-                                    <div class="title">FEB</div>
-                                    <div class="value tooltips" data-original-title="5.000" data-toggle="tooltip" data-placement="top">50%</div>
-                                </div>
-                                <div class="bar ">
-                                    <div class="title">MAR</div>
-                                    <div class="value tooltips" data-original-title="6.000" data-toggle="tooltip" data-placement="top">60%</div>
-                                </div>
-                                <div class="bar ">
-                                    <div class="title">APR</div>
-                                    <div class="value tooltips" data-original-title="4.500" data-toggle="tooltip" data-placement="top">45%</div>
-                                </div>
-                                <div class="bar">
-                                    <div class="title">MAY</div>
-                                    <div class="value tooltips" data-original-title="3.200" data-toggle="tooltip" data-placement="top">32%</div>
-                                </div>
-                                <div class="bar ">
-                                    <div class="title">JUN</div>
-                                    <div class="value tooltips" data-original-title="6.200" data-toggle="tooltip" data-placement="top">62%</div>
-                                </div>
-                                <div class="bar">
-                                    <div class="title">JUL</div>
-                                    <div class="value tooltips" data-original-title="7.500" data-toggle="tooltip" data-placement="top">75%</div>
-                                </div>
-                            </div>
-                            <!--custom chart end-->
-                        </div><!-- /row -->
-
-                    </div><!-- /col-lg-9 END SECTION MIDDLE -->
-
-
-                    <!-- **********************************************************************************************************************************************************
-                    RIGHT SIDEBAR CONTENT
-                    *********************************************************************************************************************************************************** -->
-
-                    <div class="col-lg-3 ds">
-                        <!--COMPLETED ACTIONS DONUTS CHART-->
-                        <h3>NOTIFICATIONS</h3>
-
-                        <!-- First Action -->
-                        <div class="desc">
-                            <div class="thumb">
-                                <span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
-                            </div>
-                            <div class="details">
-                                <p><muted>2 Minutes Ago</muted><br/>
-                                <a href="#">James Brown</a> subscribed to your newsletter.<br/>
-                                </p>
-                            </div>
-                        </div>
-                        <!-- Second Action -->
-                        <div class="desc">
-                            <div class="thumb">
-                                <span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
-                            </div>
-                            <div class="details">
-                                <p><muted>3 Hours Ago</muted><br/>
-                                <a href="#">Diana Kennedy</a> purchased a year subscription.<br/>
-                                </p>
-                            </div>
-                        </div>
-                        <!-- Third Action -->
-                        <div class="desc">
-                            <div class="thumb">
-                                <span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
-                            </div>
-                            <div class="details">
-                                <p><muted>7 Hours Ago</muted><br/>
-                                <a href="#">Brandon Page</a> purchased a year subscription.<br/>
-                                </p>
-                            </div>
-                        </div>
-                        <!-- Fourth Action -->
-                        <div class="desc">
-                            <div class="thumb">
-                                <span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
-                            </div>
-                            <div class="details">
-                                <p><muted>11 Hours Ago</muted><br/>
-                                <a href="#">Mark Twain</a> commented your post.<br/>
-                                </p>
-                            </div>
-                        </div>
-                        <!-- Fifth Action -->
-                        <div class="desc">
-                            <div class="thumb">
-                                <span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
-                            </div>
-                            <div class="details">
-                                <p><muted>18 Hours Ago</muted><br/>
-                                <a href="#">Daniel Pratt</a> purchased a wallet in your store.<br/>
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- USERS ONLINE SECTION -->
-                        <h3>TEAM MEMBERS</h3>
-                        <!-- First Member -->
-                        <div class="desc">
-                            <div class="thumb">
-                                <img class="img-circle" src="assets/img/ui-divya.jpg" width="35px" height="35px" align="">
-                            </div>
-                            <div class="details">
-                                <p><a href="#">DIVYA MANIAN</a><br/>
-                                <muted>Available</muted>
-                                </p>
-                            </div>
-                        </div>
-                        <!-- Second Member -->
-                        <div class="desc">
-                            <div class="thumb">
-                                <img class="img-circle" src="assets/img/ui-sherman.jpg" width="35px" height="35px" align="">
-                            </div>
-                            <div class="details">
-                                <p><a href="#">DJ SHERMAN</a><br/>
-                                <muted>I am Busy</muted>
-                                </p>
-                            </div>
-                        </div>
-                        <!-- Third Member -->
-                        <div class="desc">
-                            <div class="thumb">
-                                <img class="img-circle" src="assets/img/ui-danro.jpg" width="35px" height="35px" align="">
-                            </div>
-                            <div class="details">
-                                <p><a href="#">DAN ROGERS</a><br/>
-                                <muted>Available</muted>
-                                </p>
-                            </div>
-                        </div>
-                        <!-- Fourth Member -->
-                        <div class="desc">
-                            <div class="thumb">
-                                <img class="img-circle" src="assets/img/ui-zac.jpg" width="35px" height="35px" align="">
-                            </div>
-                            <div class="details">
-                                <p><a href="#">Zac Sniders</a><br/>
-                                <muted>Available</muted>
-                                </p>
-                            </div>
-                        </div>
-                        <!-- Fifth Member -->
-                        <div class="desc">
-                            <div class="thumb">
-                                <img class="img-circle" src="assets/img/ui-sam.jpg" width="35px" height="35px" align="">
-                            </div>
-                            <div class="details">
-                                <p><a href="#">Marcel Newman</a><br/>
-                                <muted>Available</muted>
-                                </p>
-                            </div>
-                        </div>
 
 
 
