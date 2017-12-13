@@ -1,6 +1,6 @@
 <?php
 
-//Salarié
+//Salarié RH en vrai
 
 ?>
 
@@ -18,14 +18,15 @@
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
     <!--external css-->
-    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet"/>
     <link rel="stylesheet" type="text/css" href="assets/css/zabuto_calendar.css">
-    <link rel="stylesheet" type="text/css" href="assets/js/gritter/css/jquery.gritter.css" />
+    <link rel="stylesheet" type="text/css" href="assets/js/gritter/css/jquery.gritter.css"/>
     <link rel="stylesheet" type="text/css" href="assets/lineicons/style.css">
 
     <!-- Custom styles for this template -->
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/style-responsive.css" rel="stylesheet">
+    <link href="assets/css/table-responsive.css" rel="stylesheet">
 
     <script src="assets/js/chart-master/Chart.js"></script>
 
@@ -38,7 +39,47 @@
 
 <body>
 
-<section id="container" >
+<!-- modal -->
+<div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="modalAjoutEmploye"
+     class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Formulaire ajout</h4>
+            </div>
+            <div class="modal-body">
+                <p>Nom</p>
+                <input type="text" name="inputNom" placeholder="Nom" autocomplete="off"
+                       class="form-control placeholder-no-fix">
+                <p style="padding-top: 10px">Prénom</p>
+                <input type="text" name="inputPrenom" placeholder="Prénom" autocomplete="off"
+                       class="form-control placeholder-no-fix">
+                <p style="padding-top: 10px">Téléphone</p>
+                <input type="text" name="inputTel" placeholder="Téléphone" autocomplete="off"
+                       class="form-control placeholder-no-fix">
+                <p style="padding-top: 10px">Email</p>
+                <input type="email" name="inputEmail" placeholder="Email" autocomplete="off"
+                       class="form-control placeholder-no-fix">
+                <p style="padding-top: 10px">Adresse</p>
+                <input type="text" name="inputAdresse" placeholder="Adresse" autocomplete="off"
+                       class="form-control placeholder-no-fix">
+                <p style="padding-top: 10px">Ville</p>
+                <input type="text" name="inputVille" placeholder="Ville" autocomplete="off"
+                       class="form-control placeholder-no-fix">
+                <p style="padding-top: 10px">Code Postal</p>
+                <input type="text" name="inputCP" placeholder="Code Postal" autocomplete="off"
+                       class="form-control placeholder-no-fix">
+            </div>
+            <div class="modal-footer">
+                <button data-dismiss="modal" class="btn btn-default" type="button">Annuler</button>
+                <button class="btn btn-theme" type="button">Envoyer</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section id="container">
     <!-- **********************************************************************************************************************************************************
     TOP BAR CONTENT & NOTIFICATIONS
     *********************************************************************************************************************************************************** -->
@@ -71,7 +112,8 @@
                                     <div class="percent">40%</div>
                                 </div>
                                 <div class="progress progress-striped">
-                                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40"
+                                         aria-valuemin="0" aria-valuemax="100" style="width: 40%">
                                         <span class="sr-only">40% Complete (success)</span>
                                     </div>
                                 </div>
@@ -84,7 +126,8 @@
                                     <div class="percent">60%</div>
                                 </div>
                                 <div class="progress progress-striped">
-                                    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60"
+                                         aria-valuemin="0" aria-valuemax="100" style="width: 60%">
                                         <span class="sr-only">60% Complete (warning)</span>
                                     </div>
                                 </div>
@@ -97,7 +140,8 @@
                                     <div class="percent">80%</div>
                                 </div>
                                 <div class="progress progress-striped">
-                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="80"
+                                         aria-valuemin="0" aria-valuemax="100" style="width: 80%">
                                         <span class="sr-only">80% Complete</span>
                                     </div>
                                 </div>
@@ -110,7 +154,8 @@
                                     <div class="percent">70%</div>
                                 </div>
                                 <div class="progress progress-striped">
-                                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
+                                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="70"
+                                         aria-valuemin="0" aria-valuemax="100" style="width: 70%">
                                         <span class="sr-only">70% Complete (Important)</span>
                                     </div>
                                 </div>
@@ -192,7 +237,7 @@
         </div>
         <div class="top-menu">
             <ul class="nav pull-right top-menu">
-                <li><a class="logout" href="login.html">Logout</a></li>
+                <li><a class="logout" href="login.php">Déconnexion</a></li>
             </ul>
         </div>
     </header>
@@ -203,81 +248,106 @@
     *********************************************************************************************************************************************************** -->
     <!--sidebar start-->
     <aside>
-        <div id="sidebar"  class="nav-collapse ">
+        <div id="sidebar" class="nav-collapse ">
             <!-- sidebar menu start-->
             <ul class="sidebar-menu" id="nav-accordion">
 
-                <p class="centered"><a href="profile.html"><img src="assets/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
-                <h5 class="centered">Marcel Newman</h5>
+                <p class="centered"><a href="profile.html"><img src="assets/img/ui-sam.jpg" class="img-circle"
+                                                                width="60"></a></p>
+                <h5 class="centered">Jeanne Darque</h5>
 
                 <li class="mt">
-                    <a class="active" href="index.html">
+                    <a data-toggle="modal" href="lndex.php#modalAjoutEmploye">
                         <i class="fa fa-dashboard"></i>
-                        <span>Dashboard</span>
+                        <span>Ajout employé</span>
                     </a>
                 </li>
 
+                <!-- modal -->
+                <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1"
+                     id="modalAjoutEmploye" class="modal fade">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;
+                                </button>
+                                <h4 class="modal-title">Mot de passe oublié ?</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>Entrez votre adresse e-mail ci-dessous pour réinitialiser votre mot de passe.</p>
+                                <input type="text" name="email" placeholder="Email" autocomplete="off"
+                                       class="form-control placeholder-no-fix">
+
+                            </div>
+                            <div class="modal-footer">
+                                <button data-dismiss="modal" class="btn btn-default" type="button">Annuler</button>
+                                <button class="btn btn-theme" type="button">Envoyer</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <li class="sub-menu">
-                    <a href="javascript:;" >
+                    <a href="javascript:;">
                         <i class="fa fa-desktop"></i>
                         <span>UI Elements</span>
                     </a>
                     <ul class="sub">
-                        <li><a  href="general.html">General</a></li>
-                        <li><a  href="buttons.html">Buttons</a></li>
-                        <li><a  href="panels.html">Panels</a></li>
+                        <li><a href="general.html">General</a></li>
+                        <li><a href="buttons.html">Buttons</a></li>
+                        <li><a href="panels.html">Panels</a></li>
                     </ul>
                 </li>
 
                 <li class="sub-menu">
-                    <a href="javascript:;" >
+                    <a href="javascript:;">
                         <i class="fa fa-cogs"></i>
                         <span>Components</span>
                     </a>
                     <ul class="sub">
-                        <li><a  href="calendar.html">Calendar</a></li>
-                        <li><a  href="gallery.html">Gallery</a></li>
-                        <li><a  href="todo_list.html">Todo List</a></li>
+                        <li><a href="calendar.html">Calendar</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="todo_list.html">Todo List</a></li>
                     </ul>
                 </li>
                 <li class="sub-menu">
-                    <a href="javascript:;" >
+                    <a href="javascript:;">
                         <i class="fa fa-book"></i>
                         <span>Extra Pages</span>
                     </a>
                     <ul class="sub">
-                        <li><a  href="blank.html">Blank Page</a></li>
-                        <li><a  href="login.html">Login</a></li>
-                        <li><a  href="lock_screen.html">Lock Screen</a></li>
+                        <li><a href="blank.html">Blank Page</a></li>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="lock_screen.html">Lock Screen</a></li>
                     </ul>
                 </li>
                 <li class="sub-menu">
-                    <a href="javascript:;" >
+                    <a href="javascript:;">
                         <i class="fa fa-tasks"></i>
                         <span>Forms</span>
                     </a>
                     <ul class="sub">
-                        <li><a  href="form_component.html">Form Components</a></li>
+                        <li><a href="form_component.html">Form Components</a></li>
                     </ul>
                 </li>
                 <li class="sub-menu">
-                    <a href="javascript:;" >
+                    <a href="javascript:;">
                         <i class="fa fa-th"></i>
                         <span>Data Tables</span>
                     </a>
                     <ul class="sub">
-                        <li><a  href="basic_table.html">Basic Table</a></li>
-                        <li><a  href="responsive_table.html">Responsive Table</a></li>
+                        <li><a href="basic_table.html">Basic Table</a></li>
+                        <li><a href="responsive_table.html">Responsive Table</a></li>
                     </ul>
                 </li>
                 <li class="sub-menu">
-                    <a href="javascript:;" >
+                    <a href="javascript:;">
                         <i class=" fa fa-bar-chart-o"></i>
                         <span>Charts</span>
                     </a>
                     <ul class="sub">
-                        <li><a  href="morris.html">Morris</a></li>
-                        <li><a  href="chartjs.html">Chartjs</a></li>
+                        <li><a href="morris.html">Morris</a></li>
+                        <li><a href="chartjs.html">Chartjs</a></li>
                     </ul>
                 </li>
 
@@ -297,223 +367,76 @@
             <div class="row">
                 <div class="col-lg-9 main-chart">
 
-                    <div class="row mtbox">
-                        <div class="col-md-2 col-sm-2 col-md-offset-1 box0">
-                            <div class="box1">
-                                <span class="li_heart"></span>
-                                <h3>933</h3>
-                            </div>
-                            <p>933 People liked your page the last 24hs. Whoohoo!</p>
-                        </div>
-                        <div class="col-md-2 col-sm-2 box0">
-                            <div class="box1">
-                                <span class="li_cloud"></span>
-                                <h3>+48</h3>
-                            </div>
-                            <p>48 New files were added in your cloud storage.</p>
-                        </div>
-                        <div class="col-md-2 col-sm-2 box0">
-                            <div class="box1">
-                                <span class="li_stack"></span>
-                                <h3>23</h3>
-                            </div>
-                            <p>You have 23 unread messages in your inbox.</p>
-                        </div>
-                        <div class="col-md-2 col-sm-2 box0">
-                            <div class="box1">
-                                <span class="li_news"></span>
-                                <h3>+10</h3>
-                            </div>
-                            <p>More than 10 news were added in your reader.</p>
-                        </div>
-                        <div class="col-md-2 col-sm-2 box0">
-                            <div class="box1">
-                                <span class="li_data"></span>
-                                <h3>OK!</h3>
-                            </div>
-                            <p>Your server is working perfectly. Relax & enjoy.</p>
-                        </div>
-
-                    </div><!-- /row mt -->
-
-
                     <div class="row mt">
-                        <!-- SERVER STATUS PANELS -->
-                        <div class="col-md-4 col-sm-4 mb">
-                            <div class="white-panel pn donut-chart">
-                                <div class="white-header">
-                                    <h5>SERVER LOAD</h5>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-6 col-xs-6 goleft">
-                                        <p><i class="fa fa-database"></i> 70%</p>
-                                    </div>
-                                </div>
-                                <canvas id="serverstatus01" height="120" width="120"></canvas>
-                                <script>
-                                    var doughnutData = [
-                                        {
-                                            value: 70,
-                                            color:"#68dff0"
-                                        },
-                                        {
-                                            value : 30,
-                                            color : "#fdfdfd"
-                                        }
-                                    ];
-                                    var myDoughnut = new Chart(document.getElementById("serverstatus01").getContext("2d")).Doughnut(doughnutData);
-                                </script>
-                            </div><! --/grey-panel -->
-                        </div><!-- /col-md-4-->
-
-
-                        <div class="col-md-4 col-sm-4 mb">
-                            <div class="white-panel pn">
-                                <div class="white-header">
-                                    <h5>TOP PRODUCT</h5>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-6 col-xs-6 goleft">
-                                        <p><i class="fa fa-heart"></i> 122</p>
-                                    </div>
-                                    <div class="col-sm-6 col-xs-6"></div>
-                                </div>
-                                <div class="centered">
-                                    <img src="assets/img/product.png" width="120">
-                                </div>
+                        <div class="col-lg-12">
+                            <div class="content-panel">
+                                <h4><i class="fa fa-angle-right"></i> No More Table</h4>
+                                <section id="no-more-tables">
+                                    <table class="table table-bordered table-striped table-condensed cf">
+                                        <thead>
+                                        <tr>
+                                            <th class="numeric">~</th>
+                                            <th class="numeric">NbJours</th>
+                                            <th class="numeric">Début</th>
+                                            <th class="numeric">Fin</th>
+                                            <th class="numeric">Prénom</th>
+                                            <th class="numeric">Nom</th>
+                                            <th class="numeric">Poste</th>
+                                            <th class="numeric">Email</th>
+                                            <th class="numeric">Jours pris</th>
+                                            <th class="numeric" colspan="2"></th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <th data-title="~" scope="row">1</th>
+                                            <td class="numeric" data-title="NbJours">3</td>
+                                            <td class="numeric" data-title="Début">21/01/2018</td>
+                                            <td class="numeric" data-title="Fin">24/01/2018</td>
+                                            <td class="numeric" data-title="Prénom">Jean-Jacques</td>
+                                            <td class="numeric" data-title="Nom">Dupont</td>
+                                            <td class="numeric" data-title="Poste">Ouvrier</td>
+                                            <td class="numeric" data-title="Email">jean-jacques@gmail.com</td>
+                                            <td class="numeric" data-title="jours pris">15</td>
+                                            <td class="numeric" colspan="2" style="background-color: #5cb85c"></td>
+                                        </tr>
+                                        <tr>
+                                            <th data-title="~" scope="row">2</th>
+                                            <td class="numeric" data-title="NbJours">1</td>
+                                            <td class="numeric" data-title="Début">14/02/2018</td>
+                                            <td class="numeric" data-title="Fin">14/02/2018</td>
+                                            <td class="numeric" data-title="Prénom">Jean-Eudes</td>
+                                            <td class="numeric" data-title="Nom">Dupont</td>
+                                            <td class="numeric" data-title="Poste">Chef de projet</td>
+                                            <td class="numeric" data-title="Email">jean-eudes@gmail.com</td>
+                                            <td class="numeric" data-title="jours pris">9</td>
+                                            <td>
+                                                <button type="button" class="btn btn-success">Accepter</button>
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn btn-danger">Refuser</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th data-title="~" scope="row">3</th>
+                                            <td class="numeric" data-title="NbJours">2</td>
+                                            <td class="numeric" data-title="Début">25/07/2018</td>
+                                            <td class="numeric" data-title="Fin">27/07/2018</td>
+                                            <td class="numeric" data-title="Prénom">Jean-Luc</td>
+                                            <td class="numeric" data-title="Nom">Dupont</td>
+                                            <td class="numeric" data-title="Poste">Fonction support</td>
+                                            <td class="numeric" data-title="Email">jean-luc@gmail.com</td>
+                                            <td class="numeric" data-title="jours pris">33</td>
+                                            <td class="numeric" colspan="2" style="background-color: #d9534f"></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </section>
                             </div>
-                        </div><!-- /col-md-4 -->
+                            <! --/content-panel -->
+                        </div><!-- /col-md-12 -->
+                    </div>
 
-                        <div class="col-md-4 mb">
-                            <!-- WHITE PANEL - TOP USER -->
-                            <div class="white-panel pn">
-                                <div class="white-header">
-                                    <h5>TOP USER</h5>
-                                </div>
-                                <p><img src="assets/img/ui-zac.jpg" class="img-circle" width="80"></p>
-                                <p><b>Zac Snider</b></p>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <p class="small mt">MEMBER SINCE</p>
-                                        <p>2012</p>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <p class="small mt">TOTAL SPEND</p>
-                                        <p>$ 47,60</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- /col-md-4 -->
-
-
-                    </div><!-- /row -->
-
-
-                    <div class="row">
-                        <!-- TWITTER PANEL -->
-                        <div class="col-md-4 mb">
-                            <div class="darkblue-panel pn">
-                                <div class="darkblue-header">
-                                    <h5>DROPBOX STATICS</h5>
-                                </div>
-                                <canvas id="serverstatus02" height="120" width="120"></canvas>
-                                <script>
-                                    var doughnutData = [
-                                        {
-                                            value: 60,
-                                            color:"#68dff0"
-                                        },
-                                        {
-                                            value : 40,
-                                            color : "#444c57"
-                                        }
-                                    ];
-                                    var myDoughnut = new Chart(document.getElementById("serverstatus02").getContext("2d")).Doughnut(doughnutData);
-                                </script>
-                                <p>April 17, 2014</p>
-                                <footer>
-                                    <div class="pull-left">
-                                        <h5><i class="fa fa-hdd-o"></i> 17 GB</h5>
-                                    </div>
-                                    <div class="pull-right">
-                                        <h5>60% Used</h5>
-                                    </div>
-                                </footer>
-                            </div><! -- /darkblue panel -->
-                        </div><!-- /col-md-4 -->
-
-
-                        <div class="col-md-4 mb">
-                            <!-- INSTAGRAM PANEL -->
-                            <div class="instagram-panel pn">
-                                <i class="fa fa-instagram fa-4x"></i>
-                                <p>@THISISYOU<br/>
-                                    5 min. ago
-                                </p>
-                                <p><i class="fa fa-comment"></i> 18 | <i class="fa fa-heart"></i> 49</p>
-                            </div>
-                        </div><!-- /col-md-4 -->
-
-                        <div class="col-md-4 col-sm-4 mb">
-                            <!-- REVENUE PANEL -->
-                            <div class="darkblue-panel pn">
-                                <div class="darkblue-header">
-                                    <h5>REVENUE</h5>
-                                </div>
-                                <div class="chart mt">
-                                    <div class="sparkline" data-type="line" data-resize="true" data-height="75" data-width="90%" data-line-width="1" data-line-color="#fff" data-spot-color="#fff" data-fill-color="" data-highlight-line-color="#fff" data-spot-radius="4" data-data="[200,135,667,333,526,996,564,123,890,464,655]"></div>
-                                </div>
-                                <p class="mt"><b>$ 17,980</b><br/>Month Income</p>
-                            </div>
-                        </div><!-- /col-md-4 -->
-
-                    </div><!-- /row -->
-
-                    <div class="row mt">
-                        <!--CUSTOM CHART START -->
-                        <div class="border-head">
-                            <h3>VISITS</h3>
-                        </div>
-                        <div class="custom-bar-chart">
-                            <ul class="y-axis">
-                                <li><span>10.000</span></li>
-                                <li><span>8.000</span></li>
-                                <li><span>6.000</span></li>
-                                <li><span>4.000</span></li>
-                                <li><span>2.000</span></li>
-                                <li><span>0</span></li>
-                            </ul>
-                            <div class="bar">
-                                <div class="title">JAN</div>
-                                <div class="value tooltips" data-original-title="8.500" data-toggle="tooltip" data-placement="top">85%</div>
-                            </div>
-                            <div class="bar ">
-                                <div class="title">FEB</div>
-                                <div class="value tooltips" data-original-title="5.000" data-toggle="tooltip" data-placement="top">50%</div>
-                            </div>
-                            <div class="bar ">
-                                <div class="title">MAR</div>
-                                <div class="value tooltips" data-original-title="6.000" data-toggle="tooltip" data-placement="top">60%</div>
-                            </div>
-                            <div class="bar ">
-                                <div class="title">APR</div>
-                                <div class="value tooltips" data-original-title="4.500" data-toggle="tooltip" data-placement="top">45%</div>
-                            </div>
-                            <div class="bar">
-                                <div class="title">MAY</div>
-                                <div class="value tooltips" data-original-title="3.200" data-toggle="tooltip" data-placement="top">32%</div>
-                            </div>
-                            <div class="bar ">
-                                <div class="title">JUN</div>
-                                <div class="value tooltips" data-original-title="6.200" data-toggle="tooltip" data-placement="top">62%</div>
-                            </div>
-                            <div class="bar">
-                                <div class="title">JUL</div>
-                                <div class="value tooltips" data-original-title="7.500" data-toggle="tooltip" data-placement="top">75%</div>
-                            </div>
-                        </div>
-                        <!--custom chart end-->
-                    </div><!-- /row -->
 
                 </div><!-- /col-lg-9 END SECTION MIDDLE -->
 
@@ -532,7 +455,9 @@
                             <span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
                         </div>
                         <div class="details">
-                            <p><muted>2 Minutes Ago</muted><br/>
+                            <p>
+                                <muted>2 Minutes Ago</muted>
+                                <br/>
                                 <a href="#">James Brown</a> subscribed to your newsletter.<br/>
                             </p>
                         </div>
@@ -543,7 +468,9 @@
                             <span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
                         </div>
                         <div class="details">
-                            <p><muted>3 Hours Ago</muted><br/>
+                            <p>
+                                <muted>3 Hours Ago</muted>
+                                <br/>
                                 <a href="#">Diana Kennedy</a> purchased a year subscription.<br/>
                             </p>
                         </div>
@@ -554,7 +481,9 @@
                             <span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
                         </div>
                         <div class="details">
-                            <p><muted>7 Hours Ago</muted><br/>
+                            <p>
+                                <muted>7 Hours Ago</muted>
+                                <br/>
                                 <a href="#">Brandon Page</a> purchased a year subscription.<br/>
                             </p>
                         </div>
@@ -565,7 +494,9 @@
                             <span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
                         </div>
                         <div class="details">
-                            <p><muted>11 Hours Ago</muted><br/>
+                            <p>
+                                <muted>11 Hours Ago</muted>
+                                <br/>
                                 <a href="#">Mark Twain</a> commented your post.<br/>
                             </p>
                         </div>
@@ -576,7 +507,9 @@
                             <span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
                         </div>
                         <div class="details">
-                            <p><muted>18 Hours Ago</muted><br/>
+                            <p>
+                                <muted>18 Hours Ago</muted>
+                                <br/>
                                 <a href="#">Daniel Pratt</a> purchased a wallet in your store.<br/>
                             </p>
                         </div>
@@ -644,7 +577,8 @@
                     <div id="calendar" class="mb">
                         <div class="panel green-panel no-margin">
                             <div class="panel-body">
-                                <div id="date-popover" class="popover top" style="cursor: pointer; disadding: block; margin-left: 33%; margin-top: -50px; width: 175px;">
+                                <div id="date-popover" class="popover top"
+                                     style="cursor: pointer; disadding: block; margin-left: 33%; margin-top: -50px; width: 175px;">
                                     <div class="arrow"></div>
                                     <h3 class="popover-title" style="disadding: none;"></h3>
                                     <div id="date-popover-content" class="popover-content"></div>
@@ -655,7 +589,8 @@
                     </div><!-- / calendar -->
 
                 </div><!-- /col-lg-3 -->
-            </div><! --/row -->
+            </div>
+            <! --/row -->
         </section>
     </section>
 
@@ -692,27 +627,6 @@
 <script src="assets/js/sparkline-chart.js"></script>
 <script src="assets/js/zabuto_calendar.js"></script>
 
-<script type="text/javascript">
-    $(document).ready(function () {
-        var unique_id = $.gritter.add({
-            // (string | mandatory) the heading of the notification
-            title: 'Welcome to Dashgum!',
-            // (string | mandatory) the text inside the notification
-            text: 'Hover me to enable the Close Button. You can hide the left sidebar clicking on the button next to the logo. Free version for <a href="http://blacktie.co" target="_blank" style="color:#ffd777">BlackTie.co</a>.',
-            // (string | optional) the image to display on the left
-            image: 'assets/img/ui-sam.jpg',
-            // (bool | optional) if you want it to fade out on its own or just sit there
-            sticky: true,
-            // (int | optional) the time you want it to be alive for before fading out
-            time: '',
-            // (string | optional) the class name you want to apply to that specific message
-            class_name: 'my-sticky-class'
-        });
-
-        return false;
-    });
-</script>
-
 <script type="application/javascript">
     $(document).ready(function () {
         $("#date-popover").popover({html: true, trigger: "manual"});
@@ -734,7 +648,7 @@
             },
             legend: [
                 {type: "text", label: "Special event", badge: "00"},
-                {type: "block", label: "Regular event", }
+                {type: "block", label: "Regular event",}
             ]
         });
     });

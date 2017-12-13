@@ -42,7 +42,7 @@ MAIN CONTENT
                 <input type="password" class="form-control" placeholder="Mot de Passe">
                 <label class="checkbox">
 		                <span class="pull-right">
-		                    <a data-toggle="modal" href="login.html#myModal">Mot de passe oublié ?</a>
+		                    <a data-toggle="modal" href="login.php#myModal">Mot de passe oublié ?</a>
 
 		                </span>
                 </label>
@@ -56,16 +56,16 @@ MAIN CONTENT
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                            <h4 class="modal-title">Forgot Password ?</h4>
+                            <h4 class="modal-title">Mot de passe oublié ?</h4>
                         </div>
                         <div class="modal-body">
-                            <p>Enter your e-mail address below to reset your password.</p>
+                            <p>Entrez votre adresse e-mail ci-dessous pour réinitialiser votre mot de passe.</p>
                             <input type="text" name="email" placeholder="Email" autocomplete="off" class="form-control placeholder-no-fix">
 
                         </div>
                         <div class="modal-footer">
-                            <button data-dismiss="modal" class="btn btn-default" type="button">Cancel</button>
-                            <button class="btn btn-theme" type="button">Submit</button>
+                            <button data-dismiss="modal" class="btn btn-default" type="button">Annuler</button>
+                            <button class="btn btn-theme" type="button">Envoyer</button>
                         </div>
                     </div>
                 </div>
