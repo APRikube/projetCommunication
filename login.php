@@ -34,7 +34,7 @@ MAIN CONTENT
 <div id="login-page">
     <div class="container">
 
-        <form class="form-login" action="traiter_connexion.php">
+        <form class="form-login" action="traiter_connexion.php" method="post">
             <h2 class="form-login-heading">Connexion</h2>
             <div class="login-wrap">
                 <input type="text" class="form-control" placeholder="Adresse mail" name="email" autofocus>
@@ -46,7 +46,7 @@ MAIN CONTENT
 
 		                </span>
                 </label>
-                <button class="btn btn-theme btn-block" href="index.html" type="submit"><i class="fa fa-lock"></i> Se connecter</button>
+                <button class="btn btn-theme btn-block" type="submit"><i class="fa fa-lock"></i> Se connecter</button>
 
             </div>
 
@@ -60,7 +60,7 @@ MAIN CONTENT
                         </div>
                         <div class="modal-body">
                             <p>Entrez votre adresse e-mail ci-dessous pour réinitialiser votre mot de passe.</p>
-                            <input type="text" name="email" placeholder="Email" autocomplete="off" class="form-control placeholder-no-fix">
+                            <input type="text" name="emailReinit" placeholder="Email" autocomplete="off" class="form-control placeholder-no-fix">
 
                         </div>
                         <div class="modal-footer">

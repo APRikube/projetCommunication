@@ -116,72 +116,48 @@
             <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
         </div>
         <!--logo start-->
-        <a href="index.html" class="logo"><b>SHARE YOUR TEAM</b></a>
+        <a href="index.php" class="logo"><b>SHARE YOUR TEAM</b></a>
         <!--logo end-->
         <div class="nav notify-row" id="top_menu">
             <!--  notification start -->
             <ul class="nav top-menu">
                 <!-- inbox dropdown start-->
                 <li id="header_inbox_bar" class="dropdown">
-                    <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="index.php#">
                         <i class="fa fa-envelope-o"></i>
-                        <span class="badge bg-theme">5</span>
+                        <span class="badge bg-theme">2</span>
                     </a>
                     <ul class="dropdown-menu extended inbox">
                         <div class="notify-arrow notify-arrow-green"></div>
                         <li>
-                            <p class="green">You have 5 new messages</p>
+                            <p class="green">Vous avez deux nouveaux messages</p>
                         </li>
                         <li>
-                            <a href="index.html#">
-                                <span class="photo"><img alt="avatar" src="assets/img/ui-zac.jpg"></span>
+                            <a href="index.php#">
+                                <span class="photo"><img alt="avatar" src="assets/img/imageProfil2.PNG"></span>
                                 <span class="subject">
-                                    <span class="from">Zac Snider</span>
-                                    <span class="time">Just now</span>
+                                    <span class="from">Gare Saint-Jean</span>
+                                    <span class="time">Il y a 3 heure</span>
                                     </span>
                                 <span class="message">
-                                        Hi mate, how is everything?
+                                        Entrer horaires
                                     </span>
                             </a>
                         </li>
                         <li>
-                            <a href="index.html#">
-                                <span class="photo"><img alt="avatar" src="assets/img/ui-divya.jpg"></span>
+                            <a href="index.php#">
+                                <span class="photo"><img alt="avatar" src="assets/img/imageProfil2.PNG"></span>
                                 <span class="subject">
-                                    <span class="from">Divya Manian</span>
-                                    <span class="time">40 mins.</span>
+                                    <span class="from">Jean-Eudes Dupont</span>
+                                    <span class="time">Il y a 1 heure</span>
                                     </span>
                                 <span class="message">
-                                     Hi, I need your help with this.
+                                        Demande de congés
                                     </span>
                             </a>
                         </li>
                         <li>
-                            <a href="index.html#">
-                                <span class="photo"><img alt="avatar" src="assets/img/ui-danro.jpg"></span>
-                                <span class="subject">
-                                    <span class="from">Dan Rogers</span>
-                                    <span class="time">2 hrs.</span>
-                                    </span>
-                                <span class="message">
-                                        Love your new Dashboard.
-                                    </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="index.html#">
-                                <span class="photo"><img alt="avatar" src="assets/img/ui-sherman.jpg"></span>
-                                <span class="subject">
-                                    <span class="from">Dj Sherman</span>
-                                    <span class="time">4 hrs.</span>
-                                    </span>
-                                <span class="message">
-                                        Please, answer asap.
-                                    </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="index.html#">See all messages</a>
+                            <a href="index.php#">Voir toutes les notifications</a>
                         </li>
                     </ul>
                 </li>
@@ -552,7 +528,7 @@
     <footer class="site-footer">
         <div class="text-center">
             2014 - Alvarez.is
-            <a href="index.html#" class="go-top">
+            <a href="index.php#" class="go-top">
                 <i class="fa fa-angle-up"></i>
             </a>
         </div>
